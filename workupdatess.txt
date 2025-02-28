@@ -1,0 +1,53 @@
+create an sprite usertable and add form controller with modelattribute
+create service add into user table
+insert in into database creating an usrdao(boolean)
+
+
+day2 
+create query for password
+check credintails
+login successfully
+
+day3
+-view page as it is
+-rentnow
+	-check redential
+		-redirect booking
+		-else:- login
+-
+
+
+day 4
+-upload image
+-add rent data into database
+-retrive data from database and display it in the view page
+-if possible check crendentials for the intro.jsp page for login **
+
+day next1
+-rent now click garepaxi-> booking page -> booking table,
+-client and tenant chat system
+
+march 6
+- fix when uploading and viewing it in main intro view page.
+
+-passed district as an paramater get it in the controller->dao -> perform query
+
+
+march 7
+- make "rent now" work -> create an table for eg named-> booking -> view page(form)->controller(modelattribute)->service(set)->Dao(persist)
+
+
+rent table - include status
+table for booking
+-PERSON ->NAME->CONTACTNO -> IDENTIFICATION DOC(CARD CITIZENSHIP,...) ->EMAIL -> MESSAGE(COMMENT BOX)
+
+
+march 8
+created booking table
+
+march 12(left)
+added login credential for renting the flat/room/house.
+
+march 13 
+booking api->added booking details into booking table.
+
