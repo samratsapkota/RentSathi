@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rentsathi-container
-        image: your-dockerhub-username/rentsathi-app:latest
+        image: bandhu8/rentsathi:latest
         ports:
         - containerPort: 8080
         env:
