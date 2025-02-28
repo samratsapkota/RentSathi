@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  db:
+  mysql-service:
     image: mysql:8.0
-    container_name: rent-db
+    container_name: rents-db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 211119
@@ -20,7 +20,7 @@ services:
     container_name: rent-app
     restart: always
     depends_on:
-      - db
+      - mysql-service
     # environment:
     #   SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3307/imsdb
     #   SPRING_DATASOURCE_USERNAME: root
