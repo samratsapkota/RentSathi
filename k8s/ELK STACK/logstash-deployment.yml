@@ -21,7 +21,7 @@ spec:
             - containerPort: 5044
           volumeMounts:
             - name: logstash-config
-              mountPath: /usr/share/logstash/logstash.conf
+              mountPath: /usr/share/logstash/pipeline/logstash.conf
               subPath: logstash.conf
       volumes:
         - name: logstash-config
@@ -38,14 +38,13 @@ spec:
       targetPort: 5044
   selector:
     app: logstash
-
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: logstash-config
 data:
-  pipeline: |
+  logstash.conf: |
     input {
       beats {
         port => 5044
@@ -54,5 +53,6 @@ data:
     output {
       elasticsearch {
         hosts => ["http://elasticsearch:9200"]
+        index => "logstash-%{+YYYY.MM.dd}"
       }
     }
