@@ -7,7 +7,7 @@ data:
     filebeat.inputs:
       - type: log
         paths:
-          - /usr/share/filebeat/logs/**/*.log
+          - /usr/share/filebeat/logs/default_rentsathi-deployment-*/**/*.log
 
     output.logstash:
       hosts: ["logstash:5400"]  
